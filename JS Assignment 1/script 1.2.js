@@ -5,6 +5,34 @@
 // let str="icecream";
 // console.log(str.slice(0,4));
 
-let name = prompt("Enter your name");
-let username = "@"+`${name}`+`${name.length}`;
-console.log(username); 
+// let name = prompt("Enter your name");
+// let username = "@"+`${name}`+`${name.length}`;
+// console.log(username); 
+
+// let companies = ["Bloomberg","Microsoft","Uber","Google","IBM","Netflix"];
+// companies.shift();
+// console.log(companies);
+// companies.splice(1,1,"Ola");
+// console.log(companies);
+// companies.push("Amazon");
+// console.log(companies);
+
+
+// let marks = [90,84,92,82,98,74,95];
+// let newArr = marks.filter((val)=>{
+//     return (val>90);
+// })
+// console.log(newArr);
+
+let n = prompt("Enter the size of array");
+let newArr = [];
+let i = 1;
+for (let index = 0; index < n; index++) {
+    newArr[index] = i;
+    i++;
+}
+console.log(newArr);
+let sum = newArr.reduce((pre,post)=>{
+    return(pre+post);
+})
+console.log(sum);
