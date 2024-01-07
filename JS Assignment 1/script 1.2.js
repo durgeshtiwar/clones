@@ -47,3 +47,14 @@ for (const div of divs) {
     i++;
 }
 
+let ele2 = document.createElement("button");
+ele2.innerText = "click me";
+ele2.style.backgroundColor = "red";
+ele2.style.color = "white";
+document.body.prepend(ele2);
+
+let para = document.querySelector("p");
+para.classList.add("newclass");
+
+
+
