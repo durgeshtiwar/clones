@@ -24,15 +24,26 @@
 // })
 // console.log(newArr);
 
-let n = prompt("Enter the size of array");
-let newArr = [];
-let i = 1;
-for (let index = 0; index < n; index++) {
-    newArr[index] = i;
+// let n = prompt("Enter the size of array");
+// let newArr = [];
+// let i = 1;
+// for (let index = 0; index < n; index++) {
+//     newArr[index] = i;
+//     i++;
+// }
+// console.log(newArr);
+// let sum = newArr.reduce((pre,post)=>{
+//     return(pre+post);
+// })
+// console.log(sum);
+
+let ele = document.querySelector("h2");
+ele.innerText = ele.innerText + "From Apna Colleg Student!";
+
+let divs = document.querySelectorAll(".box");
+let i=1;
+for (const div of divs) {
+    div.innerText = `This is the ${i} box`;
     i++;
 }
-console.log(newArr);
-let sum = newArr.reduce((pre,post)=>{
-    return(pre+post);
-})
-console.log(sum);
+
