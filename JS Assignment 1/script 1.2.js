@@ -56,5 +56,16 @@ document.body.prepend(ele2);
 let para = document.querySelector("p");
 para.classList.add("newclass");
 
-
-
+let btn = document.querySelector(".button");
+let mode = "light";
+btn.addEventListener("click",()=>{
+    if (mode === "light") {
+        mode = "dark";
+        document.body.style.backgroundColor = "black";
+    }
+    else{
+        mode = "light";
+        document.body.style.backgroundColor = "white";
+    }
+    console.log(mode);
+})
