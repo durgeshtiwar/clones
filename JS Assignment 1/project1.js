@@ -1,5 +1,6 @@
 let boxes = document.querySelectorAll(".box");
 let resetbtn = document.querySelector(".reset"); 
+let msg = document.querySelector(".msg");
 let true0 = true;
 const winpatterns = [
     [0, 1, 2],
@@ -11,6 +12,16 @@ const winpatterns = [
     [3, 4, 5],
     [6, 7, 8],
 ];
+
+const showwinner = (winner)=> {
+    msg.innerHTML = `Congratulations Winner is ${winner}`;
+    Disabled();
+}
+const Disabled = ()=>{
+    for (let box of boxes) {
+        box.disabled = true; 
+    }
+}
 
 boxes.forEach((box)=> {
     box.addEventListener("click",()=>{
@@ -29,7 +40,13 @@ boxes.forEach((box)=> {
 
 let chekwinner = ()=>{
     for(pattern of winpatterns){
-        console.log(pattern[0],pattern[1],pattern[2]);
-        console.log(boxes[pattern[0]].innerHTML, boxes[pattern[1]], boxes[pattern[2]]);
+        let pos1valu = boxes[pattern[0]].innerHTML;
+        let pos2valu = boxes[pattern[1]].innerHTML;
+        let pos3valu = boxes[pattern[2]].innerHTML;
+        if (pos1valu != "" && pos2valu != "" && pos3valu != "") {
+            if (pos1valu === pos2valu && pos2valu === pos3valu) {
+                showwinner(pos1valu);
+            }
+        }
     }
 }
