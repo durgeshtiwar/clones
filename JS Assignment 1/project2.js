@@ -1,23 +1,29 @@
 let yourChoice = 0;
 let compChoice = 0;
+let yourScore = 0;
+let comScore = 0;
 const choices = document.querySelectorAll(".choices");
 let msg = document.querySelector("#msgp");
-let yourScore = document.querySelector(".your-score");
+let yourScorePara = document.querySelector(".your-score");
+let comScorePara = document.querySelector(".com-score");
 yourScore.innerHTML = 0;
 const showMessage = (youWin)=>{
     if (youWin) {
-        msg.innerHTML = "you win the Game";
+        yourScore++;
+        msg.innerHTML = "You win the Game";
         msg.style.backgroundColor = "green";
-        yourScore.innerHTML = yourScore.innerHTML + 1;
+        yourScorePara.innerHTML = yourScore;
     } else {
+        comScore++;
         msg.innerHTML = "You lost the game";
         msg.style.backgroundColor = "red";
+        comScorePara.innerHTML = comScore;
     }
 }
 const playGame = ()=>{
     let youWin = true;
     if (yourChoice === compChoice) {
-        msg.innerHTML = "Game is Draw";
+        msg.innerHTML = "Game is Draw, Play again";
         msg.style.backgroundColor = "black";
     }
     else{
