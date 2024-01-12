@@ -40,6 +40,9 @@ img{
 .com-score{
     font-size: 2rem;
 }
+p{
+    font-size: 2rem;
+}
 .container2{
     display: flex;
     justify-content: center;
