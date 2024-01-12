@@ -3,19 +3,22 @@ let compChoice = 0;
 const choices = document.querySelectorAll(".choices");
 let msg = document.querySelector("#msgp");
 let yourScore = document.querySelector(".your-score");
-yourScore.innerHTML = "0";
+yourScore.innerHTML = 0;
 const showMessage = (youWin)=>{
     if (youWin) {
         msg.innerHTML = "you win the Game";
-        yourScore.innerHTML = yourScore.innerHTML + "1";
+        msg.style.backgroundColor = "green";
+        yourScore.innerHTML = yourScore.innerHTML + 1;
     } else {
         msg.innerHTML = "You lost the game";
+        msg.style.backgroundColor = "red";
     }
 }
 const playGame = ()=>{
     let youWin = true;
     if (yourChoice === compChoice) {
         msg.innerHTML = "Game is Draw";
+        msg.style.backgroundColor = "black";
     }
     else{
         if(yourChoice === "Rock")

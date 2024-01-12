@@ -34,17 +34,14 @@ img{
     justify-content: center;
     align-items: center;
 }
-.your-score{
+.score{
     font-size: 2rem;
-}
-.com-score{
-    font-size: 2rem;
-}
-p{
-    font-size: 2rem;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 .container2{
-    display: flex;
     justify-content: center;
     gap: 1rem;
     padding-top: 1rem;
@@ -57,6 +54,6 @@ p{
     padding: 1rem; 
     border-radius: 1rem;
 }
-#msg{
+.msg{
     padding-top: 1.5rem;
 }
